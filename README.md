@@ -71,4 +71,4 @@ For calculating the cost, we had a few key criteria in our minds.
 
 So we came up with the following formula:\
 
-cost = (l1iSize * log(l1iAssociativity) + l1dSize * log(l1dAssociativity) + 0.8 * l2Size * log2(l2Associativity)) * log(CLSize)
+cost = (l1iSize * log(l1iAssociativity) + l1dSize * log(l1dAssociativity) + 0.8 * l2Size * log(l2Associativity)) * (CLSize)
