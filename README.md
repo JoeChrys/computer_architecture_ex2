@@ -12,7 +12,7 @@ Iosif Chrysostomou 9130
 
 We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way set associative **data cache** with a size of `64kB`, a 2 way set associative **instruction cache** with a size of `32kB` and an 8 way set associative **L2 cache** with a size of `2MB`.
 
-![bargraph6](./images/simms.png)
+![Simulated Seconds](./images/simms.png)
 
 #### 2. Simulation statistics
 
@@ -51,7 +51,8 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 **L1 iCache miss rate**: 0.000020\
 **L2 cache miss rate**: 0.999979
 
-![bargraph1](./images/dcachemissrate.png) ![bargraph2](./images/icachemissrate.png)
+![Data Cache Miss Rate](./images/dcachemissrate.png) 
+![Instruction Cache Miss Rate](./images/icachemissrate.png)
 
 
 
@@ -63,7 +64,7 @@ In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used
 
 The simulated seconds do not scale with the clock frequency. This was also apparent on the first lab where we run our code with a wider variety of frequencies. The reason is that some stages of the execution of a command, do not depend only on the cpu frequency. A couple of those stages are reading and writing on the memory. The memory transfers rates are not tied to the cpu frequency, which means there can be delays which are independent from the rest of the system.
 
-![bargraph4](./images/2v4GHz.png)
+![Comparing 2GHz and 4GHz](./images/2v4GHz.png)
 
 ### 2nd Step
 #### 1. Optimizing for Speclibm
