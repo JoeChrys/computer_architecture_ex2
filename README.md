@@ -51,9 +51,9 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 **L1 iCache miss rate**: 0.000020\
 **L2 cache miss rate**: 0.999979
 
-![bargraph1](./images/dcachemissrate.png)
+![bargraph1](./images/dcachemissrate.png) ![bargraph2](./images/icachemissrate.png)
 
-![bargraph2](./images/icachemissrate.png)
+
 
 ![bargraph3](./images/l2missrate.png)
 
