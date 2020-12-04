@@ -12,7 +12,7 @@ Iosif Chrysostomou 9130
 
 We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way set associative **data cache** with a size of `64kB`, a 2 way set associative **instruction cache** with a size of `32kB` and an 8 way set associative **L2 cache** with a size of `2MB`.
 
-![bargraph6](../images/simms.png)
+![bargraph6](./images/simms.png)
 
 #### 2. Simulation statistics
 
