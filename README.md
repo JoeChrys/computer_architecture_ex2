@@ -10,7 +10,7 @@ Iosif Chrysostomou 9130
 ### 1st Step
 #### 1.
 
-We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way set associative **data cache** with a size of `64kB` and  a 2 way set associative **instruction cache** with a size of `32kB`.
+We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way set associative **data cache** with a size of `64kB`, a 2 way set associative **instruction cache** with a size of `32kB` and an 8 way set associative **L2 cache** with a size of `2MB`.
 
 #### 2.
 
