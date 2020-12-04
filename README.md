@@ -61,3 +61,9 @@ The performance of the particular benchmarks seems to rely heavily on cache bloc
 #### 2.
 
 ### 3rd Step
+
+For calculating the cost, we had a few key criteria in our minds.\
+First, the cost of every memory level scales linearly with its size.\
+Then, the lower level memories with the same characteristics (size, associativity etc) are cheaper to manufacture. In this case, we assumed that the L2 cache is 30% cheaper than the L1 cache.\
+Increasing the associativity should also increase the cost, but not linearly. As we saw in the lectures, increasing the associativity, has diminishing returns. More specifically, more than an 8 way associative memory, shows very little improvements in performance. We made an educated guess and chose a logarithmic increase in the overall cost from the increase in assosiativity.\
+Lastly, cash line size should also play a role in the final cost. We choose to multiply the above cost with the line size, because it affects both memory levels, and it increases the complexity of the hole cpu.
