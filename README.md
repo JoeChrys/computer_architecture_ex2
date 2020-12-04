@@ -51,15 +51,15 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 **L1 iCache miss rate**: 0.000020\
 **L2 cache miss rate**: 0.999979
 
-![bargraph1](../images/dcachemissrate.png)
+![bargraph1](./images/dcachemissrate.png)
 
-![bargraph2](../images/icachemissrate.png)
+![bargraph2](./images/icachemissrate.png)
 
-![bargraph3](../images/l2missrate.png)
+![bargraph3](./images/l2missrate.png)
 
 #### 3. Different clock domains
 
-![bargraph4](../images/2v4GHz.png)
+![bargraph4](./images/2v4GHz.png)
 
 In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used to synchronize everything on the motherboard. The cpu_clk_domain clock refers to the cpu clock. That clock is by default, multiple of the system clock. So a second cpu, would run at a multiple of `1GHz`.
 
