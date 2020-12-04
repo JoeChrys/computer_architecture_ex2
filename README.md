@@ -14,35 +14,35 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 
 #### 2. Simulation statistics
 
-##### specbzip:
+#### specbzip:
 **simulated ms**: 83.847\
 **cpi**: 1.676947\
 **L1 dCache miss rate**: 0.014289\
 **L1 iCache miss rate**: 0.000075\
 **L2 cache miss rate**: 0.294749
 
-##### spechmmer:
+#### spechmmer:
 **simulated ms**: 59.410\
 **cpi**: 1.188197\
 **L1 dCache miss rate**: 0.001692\
 **L1 iCache miss rate**: 0.000204\
 **L2 cache miss rate**: 0.079948
 
-##### speclibm:
+#### speclibm:
 **simulated ms**: 174.779\
 **cpi**: 3.495573\
 **L1 dCache miss rate**: 0.060971\
 **L1 iCache miss rate**: 0.000098\
 **L2 cache miss rate**: 0.999927
 
-##### specmcf:
+#### specmcf:
 **simulated ms**: 55.471\
 **cpi**: 1.109419\
 **L1 dCache miss rate**: 0.002038\
 **L1 iCache miss rate**: 0.000037\
 **L2 cache miss rate**: 0.727788
 
-##### specsjeng:
+#### specsjeng:
 **simulated ms**: 513.819\
 **cpi**: 10.276385\
 **L1 dCache miss rate**: 0.121829\
