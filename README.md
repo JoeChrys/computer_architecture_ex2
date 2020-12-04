@@ -70,4 +70,4 @@ For calculating the cost, we had a few key criteria in our minds.
 * Lastly, cash line size should also play a role in the final cost. We choose to multiply the above cost with the line size, because it affects both memory levels, and it increases the complexity of the hole cpu.
 
 So we came up with the following formula:\
-cost = (l1iSize * log2(l1iAssociativity) + l1dSize * log2(l1dAssociativity) + 0.7 * l2Size * log2(l2Associativity)) * log2(CLSize)
+cost = (l1iSize * log(l1iAssociativity) + l1dSize * log(l1dAssociativity) + 0.7 * l2Size * log2(l2Associativity)) * log(CLSize)
