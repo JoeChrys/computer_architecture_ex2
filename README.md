@@ -59,11 +59,11 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 
 #### 3. Different clock domains
 
-![bargraph4](./images/2v4GHz.png)
-
 In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used to synchronize everything on the motherboard. The cpu_clk_domain clock refers to the cpu clock. That clock is by default, multiple of the system clock. So a second cpu, would run at a multiple of `1GHz`.
 
 The simulated seconds do not scale with the clock frequency. This was also apparent on the first lab where we run our code with a wider variety of frequencies. The reason is that some stages of the execution of a command, do not depend only on the cpu frequency. A couple of those stages are reading and writing on the memory. The memory transfers rates are not tied to the cpu frequency, which means there can be delays which are independent from the rest of the system.
+
+![bargraph4](./images/2v4GHz.png)
 
 ### 2nd Step
 #### 1. Optimizing for Speclibm
@@ -81,4 +81,4 @@ For calculating the cost, we had a few key criteria in our minds.
 
 So we came up with the following formula:\
 
-cost = (l1iSize * log(l1iAssociativity) + l1dSize * log(l1dAssociativity) + 0.8 * l2Size * log(l2Associativity)) * (CLSize)
+`cost = (InstCacheSize * log(InstCacheAssoc) + DataCacheSize * log(DataCacheAssoc) + 0.8 * L2Size * log(L2Assoc)) * (CacheLineSize)log(CacheLineSize)`
