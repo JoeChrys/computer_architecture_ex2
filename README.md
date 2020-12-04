@@ -9,9 +9,9 @@
 **icache**: 32kB, 2 way set associative
 
 ##### spechmmer:
-**cache line size** 64B
-**dcache**: 64kB, 2 way set associative
-**icache**: 32kB, 2 way set associative
+**cache line size** 64B\
+**dcache**: 64kB, 2 way set associative\
+**icache**: 32kB, 2 way set associative\
 
 ##### speclibm:
 **cache line size** 64B
