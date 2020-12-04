@@ -8,11 +8,11 @@ Iosif Chrysostomou 9130
 ---
 
 ### 1st Step
-#### 1.
+#### 1. System parameters
 
 We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way set associative **data cache** with a size of `64kB`, a 2 way set associative **instruction cache** with a size of `32kB` and an 8 way set associative **L2 cache** with a size of `2MB`.
 
-#### 2.
+#### 2. Simulation statistics
 
 ##### specbzip:
 **simulated ms**: 83.847\
@@ -49,15 +49,15 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 **L1 iCache miss rate**: 0.000020\
 **L2 cache miss rate**: 0.999979
 
-#### 3.
+#### 3. Different clock domains
 
-In both cases, the system runs at 2GHz (system.clk_domain). This clock is used to synchronize everything on the motherboard. The cpu_clk_domain clock refers to the cpu clock. That clock is by default, multiple of the system clock. So a second cpu, would run at a multiple of 1GHz.
+In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used to synchronize everything on the motherboard. The cpu_clk_domain clock refers to the cpu clock. That clock is by default, multiple of the system clock. So a second cpu, would run at a multiple of `1GHz`.
 
 The simulated seconds do not scale with the clock frequency. This was also apparent on the first lab where we run our code with a wider variety of frequencies. The reason is that some stages of the execution of a command, do not depend only on the cpu frequency. A couple of those stages are reading and writing on the memory. The memory transfers rates are not tied to the cpu frequency, which means there can be delays which are independent from the rest of the system.
 
 ### 2nd Step
-#### 1.
-
+#### 1. Optimizing for Speclibm
+The performance of the particular benchmarks seems to rely heavily on cache block size, which is demonstated by the following graphs.
 #### 2.
 
 ### 3rd Step
