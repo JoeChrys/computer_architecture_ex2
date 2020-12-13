@@ -51,12 +51,7 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 **L1 iCache miss rate**: 0.000020\
 **L2 cache miss rate**: 0.999979
 
-![Data Cache Miss Rate](./images/dcachemissrate.png) 
-![Instruction Cache Miss Rate](./images/icachemissrate.png)
-
-
-
-![bargraph3](./images/l2missrate.png)
+![Default Settings Results](./images/defaults.png) 
 
 #### 3. Different clock domains
 
