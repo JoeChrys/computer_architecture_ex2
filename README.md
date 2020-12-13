@@ -58,7 +58,7 @@ So we came up with the following formula
 
 | **Data Cache** | 32kB 1 way | 64kB 1 way | 128kB 1 way | 32kB 2 way | 64kB 2 way | 128kB 2 way |
 |----------------|------------|------------|-------------|------------|------------|-------------|
-|    **cost**    |    5.14M   |    4.98M   |    5.71M    |    5.25M    |    5.56M   |    6.16M    |
+|    **cost**    |    5.14M   |    5.33M   |    5.71M    |    5.25M    |    5.56M   |    6.16M    |
 
 
 | **Instr. Cache** | 32kB 2 way | 64kB 2 way | 128kB 2 way | 32kB 4 way | 64kB 4 way | 128kB 4 way |
