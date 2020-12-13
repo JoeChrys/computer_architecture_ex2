@@ -32,12 +32,18 @@ In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used
 
 The simulated seconds do not scale with the clock frequency. This was also apparent on the first lab where we run our code with a wider variety of frequencies. The reason is that some stages of the execution of a command, do not depend only on the cpu frequency. A couple of those stages are reading and writing on the memory. The memory transfers rates are not tied to the cpu frequency, which means there can be delays which are independent from the rest of the system.
 
-![Comparing 2GHz and 4GHz](./images/2v4GHz.png)
+![Comparing 1GHz and 2GHz](./images/cpuclockcomparison.png)
 
 ### 2nd Step
-#### 1. Optimizing for Speclibm
-The performance of the particular benchmarks seems to rely heavily on cache block size, which is demonstated by the following graphs.
-#### 2.
+
+#### 1. Selecting variations to emulate
+As we have learnt from the lessons, having more than 1-way associativity greatly increases performance by avoiding memory conflicts, but also has diminishing returns at larger values. This is the reason we chose to simulate 2, 4 and 8-way associativities. Also, Cache Line Size has a rather negetive impact on the performance when small values are used, however very large values increase the implementation cost (based on Step 3).
+
+#### 2. Results of the selected simulations
+[Cache Line Size](./cls.md)
+[Data Cache Size and Associativity](./dcache.md)
+[Instruction Cache Size and Associativity](./icache.md)
+[L2 Cache Size and Associativity](./l2.md)
 
 ### 3rd Step
 
