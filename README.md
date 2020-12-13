@@ -16,6 +16,12 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 
 #### 2. Simulation statistics
 
+![Default Settings Results](./images/defaults.png) 
+
+#### 3. Different clock domains
+
+In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used to synchronize everything on the motherboard. The cpu_clk_domain clock refers to the cpu clock. That clock is by default, multiple of the system clock. So a second cpu, would run at a multiple of `1GHz`.
+
 | | Simulated ms | CPI | Data Cache Miss Rate | Instruction Cache Miss Rate | L2 Cache Miss Rate |
 | --- | :---: | :---: | :---: | :---: |:---: |
 | specbzip | 160.703 | 1.607035 | 0.014133 | 0.000076 | 0.294739 | 
@@ -23,12 +29,6 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 | speclibm | 262.248 | 2.622476 | 0.060971 | 0.000098 | 0.999927 |
 | specmcf | 109.233 | 1.09233 | 0.002038 | 0.000037 | 0.727788 |
 | specsjeng | 705.453 | 7.054533 | 0.121829 | 0.000020 | 0.999979 |
-
-![Default Settings Results](./images/defaults.png) 
-
-#### 3. Different clock domains
-
-In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used to synchronize everything on the motherboard. The cpu_clk_domain clock refers to the cpu clock. That clock is by default, multiple of the system clock. So a second cpu, would run at a multiple of `1GHz`.
 
 The simulated seconds do not scale with the clock frequency. This was also apparent on the first lab where we run our code with a wider variety of frequencies. The reason is that some stages of the execution of a command, do not depend only on the cpu frequency. A couple of those stages are reading and writing on the memory. The memory transfers rates are not tied to the cpu frequency, which means there can be delays which are independent from the rest of the system.
 
