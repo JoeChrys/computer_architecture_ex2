@@ -87,3 +87,11 @@ Considering our knowledge and our results from the benchmarks we run, we conclud
 * 64kB 4 way associative Data cache
 * 32kB 2 way associative Instr. Cache
 * 1MB 4 way associative L2 cache
+
+| | Default Parameters | Chosen Parameters |
+|---|---|---|
+| **cost** | 19464192 | 7274496 |
+
+The performance of the 2 configurations is displayed in the graph below. The final subplot indicates the **Price-to-Performance Ratio**, in this case in the form of `cost * cpi` where less is better.
+
+![Chosen Parameter Results](./images/chosenresults.png)
