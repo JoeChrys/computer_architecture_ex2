@@ -56,16 +56,22 @@ So we came up with the following formula
 |---------------------|------|------|-------|
 |       **cost**      |  4.44M  | 5.33M |  6.22M |
 
+From the simulations we run, it looks like increasing the cache line size, benefits only certain workloads. Out of our five benchmarks, only **specjeng** and **speclibm** showed a significant decrease in the simulated ms. 
+
 | **Data Cache** | 32kB 1 way | 64kB 1 way | 128kB 1 way | 32kB 2 way | 64kB 2 way | 128kB 2 way |
 |----------------|------------|------------|-------------|------------|------------|-------------|
 |    **cost**    |    5.14M   |    5.33M   |    5.71M    |    5.25M    |    5.56M   |    6.16M    |
 
+Changing the Data cache configurations showed minimal improvements in performance across the board, with only the **specbzip** benchmark having a measurable difference in the simulated ms.
 
 | **Instr. Cache** | 32kB 2 way | 64kB 2 way | 128kB 2 way | 32kB 4 way | 64kB 4 way | 128kB 4 way |
 |------------------|------------|------------|-------------|------------|------------|-------------|
 |     **cost**     |    5.44M    |    5.75M    |     6.36M    |    5.58M   |    6.03M   |    6.92M    |
 
+The benefits of changing the Instruction caches size and associativity are basically zero in every benchmark we tried.
 
 | **L2 Cache** | 512kB 4 way | 1MB 4 way | 2MB 4 way | 4MB 4 way | 512kB 8 way | 1MB 8 way | 2MB 8 way | 4MB 8 way |
 |------------------|-------------|-----------|-----------|-----------|-------------|-----------|-----------|-----------|
 |     **cost**     |    4.14M    |   7.54M   |   14.5M   |   28.44M  |    5.45M    |   10.09M  |   19.6M   |   38.61M  |
+
+L2 cache shows a similar trend to the other two memories we tried tweaking. Most of the benchmarks had little to no improvements except **specbzip**, which had an decrease in the simulated ms of about 5%.
