@@ -40,10 +40,10 @@ The simulated seconds do not scale with the clock frequency. This was also appar
 As we have learnt from the lessons, having more than 1-way associativity greatly increases performance by avoiding memory conflicts, but also has diminishing returns at larger values. This is the reason we chose to simulate 2, 4 and 8-way associativities. Also, Cache Line Size has a rather negetive impact on the performance when small values are used, however very large values increase the implementation cost (based on Step 3).
 
 #### 2. Results of the selected simulations
-[Cache Line Size](./cls.md)
-[Data Cache Size and Associativity](./dcache.md)
-[Instruction Cache Size and Associativity](./icache.md)
-[L2 Cache Size and Associativity](./l2.md)
+* [Cache Line Size](./cls.md)
+* [Data Cache Size and Associativity](./dcache.md)
+* [Instruction Cache Size and Associativity](./icache.md)
+* [L2 Cache Size and Associativity](./l2.md)
 
 ### 3rd Step
 
