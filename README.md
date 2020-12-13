@@ -16,40 +16,13 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 
 #### 2. Simulation statistics
 
-#### specbzip:
-**simulated ms**: 83.847\
-**cpi**: 1.676947\
-**L1 dCache miss rate**: 0.014289\
-**L1 iCache miss rate**: 0.000075\
-**L2 cache miss rate**: 0.294749
-
-#### spechmmer:
-**simulated ms**: 59.410\
-**cpi**: 1.188197\
-**L1 dCache miss rate**: 0.001692\
-**L1 iCache miss rate**: 0.000204\
-**L2 cache miss rate**: 0.079948
-
-#### speclibm:
-**simulated ms**: 174.779\
-**cpi**: 3.495573\
-**L1 dCache miss rate**: 0.060971\
-**L1 iCache miss rate**: 0.000098\
-**L2 cache miss rate**: 0.999927
-
-#### specmcf:
-**simulated ms**: 55.471\
-**cpi**: 1.109419\
-**L1 dCache miss rate**: 0.002038\
-**L1 iCache miss rate**: 0.000037\
-**L2 cache miss rate**: 0.727788
-
-#### specsjeng:
-**simulated ms**: 513.819\
-**cpi**: 10.276385\
-**L1 dCache miss rate**: 0.121829\
-**L1 iCache miss rate**: 0.000020\
-**L2 cache miss rate**: 0.999979
+| | Simulated ms | CPI | Data Cache Miss Rate | Instruction Cache Miss Rate | L2 Cache Miss Rate |
+| --- | :---: | :---: | :---: | :---: |:---: |
+| specbzip | 83.847 | 1.676947 | 0.014289 | 0.000075 | 0.294749 | 
+| spechmmer | 59.410 | 1.188197 | 0.001692 | 0.000204 | 0.079948 |
+| speclibm | 174.779 | 3.495573 | 0.060971 | 0.000098 | 0.999927 |
+| specmcf | 55.471 | 1.109419 | 0.002038 | 0.000037 | 0.727788 |
+| specsjeng | 513.819 | 10.276385 | 0.121829 | 0.000020 | 0.999979 |
 
 ![Default Settings Results](./images/defaults.png) 
 
