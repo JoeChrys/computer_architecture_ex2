@@ -74,4 +74,10 @@ The benefits of changing the Instruction caches size and associativity are basic
 |------------------|-------------|-----------|-----------|-----------|-------------|-----------|-----------|-----------|
 |     **cost**     |    4.14M    |   7.54M   |   14.5M   |   28.44M  |    5.45M    |   10.09M  |   19.6M   |   38.61M  |
 
-L2 cache shows a similar trend to the other two memories we tried tweaking. Most of the benchmarks had little to no improvements except **specbzip**, which had an decrease in the simulated ms of about 5%.
+L2 cache shows a similar trend to the other two memories we tried tweaking. Most of the benchmarks had little to no improvements except **specbzip**, which had an decrease in the simulated ms of about 5%.\
+
+Considering our knowledge and our results from the benchmarks we run we concluded that the optimum configurations are the following:
+* 64B Cache line size
+* 64kB 4 way associative Data cache
+* 32kB 2 way associative Instr. Cache
+* 1MB 4 way associative L2 cache
