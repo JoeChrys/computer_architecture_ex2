@@ -80,6 +80,6 @@ For calculating the cost, we had a few key criteria in our minds.
 * Increasing the associativity should also increase the cost, but not linearly. As we saw in the lectures, increasing the associativity, has diminishing returns. More specifically, more than an 8 way associative memory, shows very little improvements in performance. We made an educated guess and chose a logarithmic increase in the overall cost from the increase in assosiativity.
 * Lastly, cash line size should also play a role in the final cost. We choose to multiply the above cost with the line size, because it affects both memory levels, and it increases the complexity of the hole cpu.
 
-So we came up with the following formula:\
+So we came up with the following formula
 
-`cost = (InstCacheSize * log(InstCacheAssoc) + DataCacheSize * log(DataCacheAssoc) + 0.8 * L2Size * log(L2Assoc)) * (CacheLineSize)log(CacheLineSize)`
+`cost = (InstCacheSize * log(InstCacheAssoc) + DataCacheSize * log(DataCacheAssoc) + 0.8 * L2Size * log(L2Assoc)) * log(CacheLineSize)`
