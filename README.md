@@ -18,11 +18,11 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 
 | | Simulated ms | CPI | Data Cache Miss Rate | Instruction Cache Miss Rate | L2 Cache Miss Rate |
 | --- | :---: | :---: | :---: | :---: |:---: |
-| specbzip | 83.847 | 1.676947 | 0.014289 | 0.000075 | 0.294749 | 
-| spechmmer | 59.410 | 1.188197 | 0.001692 | 0.000204 | 0.079948 |
-| speclibm | 174.779 | 3.495573 | 0.060971 | 0.000098 | 0.999927 |
-| specmcf | 55.471 | 1.109419 | 0.002038 | 0.000037 | 0.727788 |
-| specsjeng | 513.819 | 10.276385 | 0.121829 | 0.000020 | 0.999979 |
+| specbzip | 160.703 | 1.607035 | 0.014133 | 0.000076 | 0.294739 | 
+| spechmmer | 118.547 | 1.185466 | 0.001684 | 0.000204 | 0.079949 |
+| speclibm | 262.248 | 2.622476 | 0.060971 | 0.000098 | 0.999927 |
+| specmcf | 109.233 | 1.09233 | 0.002038 | 0.000037 | 0.727788 |
+| specsjeng | 705.453 | 7.054533 | 0.121829 | 0.000020 | 0.999979 |
 
 ![Default Settings Results](./images/defaults.png) 
 
