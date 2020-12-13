@@ -50,7 +50,7 @@ For calculating the cost, we had a few key criteria in our minds.
 
 So we came up with the following formula
 
-`cost = (InstCacheSize * log(InstCacheAssoc) + DataCacheSize * log(DataCacheAssoc) + 0.8 * L2Size * log(L2Assoc)) * log(CacheLineSize)`
+`cost = (InstCacheSize * log(InstCacheAssoc) + DataCacheSize * log(DataCacheAssoc) + 0.5 * L2Size * log(L2Assoc)) * log(CacheLineSize)`
 
 | **Cache Line Size** | 32kB | 64kB | 128kB |
 |---------------------|------|------|-------|
