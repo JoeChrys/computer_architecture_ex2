@@ -58,9 +58,9 @@ So we came up with the following formula
 
 From the simulations we run, it looks like increasing the cache line size, benefits only certain workloads. Out of our five benchmarks, only **specjeng** and **speclibm** showed a significant decrease in the simulated ms. 
 
-| **Data Cache** | 32kB 1 way | 64kB 1 way | 128kB 1 way | 32kB 2 way | 64kB 2 way | 128kB 2 way |
+| **Data Cache** | 32kB 2 way | 64kB 2 way | 128kB 2 way | 32kB 4 way | 64kB 4 way | 128kB 4 way |
 |----------------|------------|------------|-------------|------------|------------|-------------|
-|    **cost**    |    5.14M   |    5.33M   |    5.71M    |    5.25M    |    5.56M   |    6.16M    |
+|    **cost**    |    5.25M   |    5.568M   |    6.16M    |    5.39M    |    5.84M   |    6.73M    |
 
 Changing the Data cache configurations showed minimal improvements in performance across the board, with only the **specbzip** benchmark having a measurable difference in the simulated ms.
 
