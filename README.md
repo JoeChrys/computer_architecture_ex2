@@ -66,6 +66,6 @@ So we came up with the following formula
 |     **cost**     |    5.44M    |    5.75M    |     6.36M    |    5.58M   |    6.03M   |    6.92M    |
 
 
-| **Instr. Cache** | 512kB 4 way | 1MB 4 way | 2MB 4 way | 4MB 4 way | 512kB 8 way | 1MB 8 way | 2MB 8 way | 4MB 8 way |
+| **L2 Cache** | 512kB 4 way | 1MB 4 way | 2MB 4 way | 4MB 4 way | 512kB 8 way | 1MB 8 way | 2MB 8 way | 4MB 8 way |
 |------------------|-------------|-----------|-----------|-----------|-------------|-----------|-----------|-----------|
 |     **cost**     |    4.14M    |   7.54M   |   14.5M   |   28.44M  |    5.45M    |   10.09M  |   19.6M   |   38.61M  |
