@@ -58,26 +58,26 @@ So we came up with the following formula
 
 `cost = (InstCacheSize * log(InstCacheAssoc) + DataCacheSize * log(DataCacheAssoc) + 0.5 * L2Size * log(L2Assoc)) * log(CacheLineSize)`
 
-| **Cache Line Size** | 32kB | 64kB | 128kB |
-|---------------------|------|------|-------|
-|       **cost**      |  4.44M  | 5.33M |  6.22M |
+| **Cache Line Size** | 32kB  |  64kB | 128kB |
+|:-------------------:|:-----:|:-----:|:-----:|
+|       **cost**      | 4.44M | 5.33M | 6.22M |
 
 From the simulations we run, it looks like increasing the cache line size, benefits only certain workloads. Out of our five benchmarks, only **specjeng** and **speclibm** showed a significant decrease in the simulated ms. 
 
 | **Data Cache** | 32kB 2 way | 64kB 2 way | 128kB 2 way | 32kB 4 way | 64kB 4 way | 128kB 4 way |
-|----------------|------------|------------|-------------|------------|------------|-------------|
-|    **cost**    |    5.25M   |    5.568M   |    6.16M    |    5.39M    |    5.84M   |    6.73M    |
+|:--------------:|:----------:|:----------:|:-----------:|:----------:|:----------:|:-----------:|
+|    **cost**    |    5.25M   |    5.568M  |    6.16M    |    5.39M   |    5.84M   |    6.73M    |
 
 Changing the Data cache configurations showed minimal improvements in performance across the board, with only the **specbzip** benchmark having a measurable difference in the simulated ms.
 
-| **Instr. Cache** | 32kB 2 way | 64kB 2 way | 128kB 2 way | 32kB 4 way | 64kB 4 way | 128kB 4 way |
-|------------------|------------|------------|-------------|------------|------------|-------------|
-|     **cost**     |    5.44M    |    5.75M    |     6.36M    |    5.58M   |    6.03M   |    6.92M    |
+| **Instr. Cache** | 32kB 2 way  | 64kB 2 way | 128kB 2 way | 32kB 4 way | 64kB 4 way | 128kB 4 way |
+|:----------------:|:-----------:|:----------:|:-----------:|:----------:|:----------:|:-----------:|
+|     **cost**     |    5.44M    |    5.75M   |     6.36M   |    5.58M   |    6.03M   |    6.92M    |
 
 The benefits of changing the Instruction caches size and associativity are basically zero in every benchmark we tried.
 
-| **L2 Cache** | 512kB 4 way | 1MB 4 way | 2MB 4 way | 4MB 4 way | 512kB 8 way | 1MB 8 way | 2MB 8 way | 4MB 8 way |
-|------------------|-------------|-----------|-----------|-----------|-------------|-----------|-----------|-----------|
+|  **L2 Cache**    | 512kB 4 way | 1MB 4 way | 2MB 4 way | 4MB 4 way | 512kB 8 way | 1MB 8 way | 2MB 8 way | 4MB 8 way |
+|:----------------:|:-----------:|:---------:|:---------:|:---------:|:-----------:|:---------:|:---------:|:---------:|
 |     **cost**     |    4.14M    |   7.54M   |   14.5M   |   28.44M  |    5.45M    |   10.09M  |   19.6M   |   38.61M  |
 
 L2 cache shows a similar trend to the other two memories we tried tweaking. Most of the benchmarks had little to no improvements except **specbzip**, which had an decrease in the simulated ms of about 5%.\
@@ -89,7 +89,7 @@ Considering our knowledge and our results from the benchmarks we run, we conclud
 * 1MB 4 way associative L2 cache
 
 | | Default Parameters | Chosen Parameters |
-|---|---|---|
+|:---:|:---:|:---:|
 | **cost** | 19464192 | 7274496 |
 
 The performance of the 2 configurations is displayed in the graph below. The final subplot indicates the **Price-to-Performance Ratio**, in this case in the form of `cost * cpi` where less is better.
