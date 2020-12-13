@@ -51,3 +51,21 @@ For calculating the cost, we had a few key criteria in our minds.
 So we came up with the following formula
 
 `cost = (InstCacheSize * log(InstCacheAssoc) + DataCacheSize * log(DataCacheAssoc) + 0.8 * L2Size * log(L2Assoc)) * log(CacheLineSize)`
+
+| **Cache Line Size** | 32kB | 64kB | 128kB |
+|---------------------|------|------|-------|
+|       **cost**      |  4.44M  | 5.33M |  6.22M |
+
+| **Data Cache** | 32kB 1 way | 64kB 1 way | 128kB 1 way | 32kB 2 way | 64kB 2 way | 128kB 2 way |
+|----------------|------------|------------|-------------|------------|------------|-------------|
+|    **cost**    |    5.14M   |    4.98M   |    5.71M    |    5.25M    |    5.56M   |    6.16M    |
+
+
+| **Instr. Cache** | 32kB 2 way | 64kB 2 way | 128kB 2 way | 32kB 4 way | 64kB 4 way | 128kB 4 way |
+|------------------|------------|------------|-------------|------------|------------|-------------|
+|     **cost**     |    5.44M    |    5.75M    |     6.36M    |    5.58M   |    6.03M   |    6.92M    |
+
+
+| **Instr. Cache** | 512kB 4 way | 1MB 4 way | 2MB 4 way | 4MB 4 way | 512kB 8 way | 1MB 8 way | 2MB 8 way | 4MB 8 way |
+|------------------|-------------|-----------|-----------|-----------|-------------|-----------|-----------|-----------|
+|     **cost**     |    4.14M    |   7.54M   |   14.5M   |   28.44M  |    5.45M    |   10.09M  |   19.6M   |   38.61M  |
