@@ -90,7 +90,7 @@ Considering our knowledge and our results from the benchmarks we run, we conclud
 
 | | Default Parameters | Chosen Parameters |
 |:---:|:---:|:---:|
-| **cost** | 19464192 | 7274496 |
+| **cost** | 19.464.192 | 7.274.496 |
 
 The performance of the 2 configurations is displayed in the graph below. The final subplot indicates the **Price-to-Performance Ratio**, in this case in the form of `cost * cpi` where less is better.
 
