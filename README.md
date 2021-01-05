@@ -20,7 +20,7 @@ We run the benchmarks on this step with a **cache line size** of `64B`, a 2 way 
 
 #### 3. Different clock domains
 
-In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used to synchronize everything on the motherboard. The cpu_clk_domain clock refers to the cpu clock. That clock is by default, multiple of the system clock. So a second cpu, would run at a multiple of `1GHz`.
+In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used to synchronize everything on the motherboard. The cpu_clk_domain clock refers to the cpu clock. That clock is by default, multiple of the system clock. So a second CPU, would run at a multiple of `1GHz`.
 
 | | Simulated ms | CPI | Data Cache Miss Rate | Instruction Cache Miss Rate | L2 Cache Miss Rate |
 | --- | :---: | :---: | :---: | :---: |:---: |
@@ -30,14 +30,14 @@ In both cases, the system runs at `2GHz` (system.clk_domain). This clock is used
 | specmcf | 109.233 | 1.09233 | 0.002038 | 0.000037 | 0.727788 |
 | specsjeng | 705.453 | 7.054533 | 0.121829 | 0.000020 | 0.999979 |
 
-The simulated seconds do not scale with the clock frequency. This was also apparent on the first lab where we run our code with a wider variety of frequencies. The reason is that some stages of the execution of a command, do not depend only on the cpu frequency. A couple of those stages are reading and writing on the memory. The memory transfers rates are not tied to the cpu frequency, which means there can be delays which are independent from the rest of the system.
+The simulated seconds do not scale with the clock frequency. This was also apparent on the first lab where we run our code with a wider variety of frequencies. The reason is that some stages of the execution of a command, do not depend only on the CPU frequency. A couple of those stages are reading and writing on the memory. The memory transfers rates are not tied to the CPU frequency, which means there can be delays which are independent from the rest of the system.
 
 ![Comparing 1GHz and 2GHz](./images/cpuclockcomparison.png)
 
 ### 2nd Step
 
 #### 1. Selecting variations to emulate
-As we have learnt from the lessons, having more than 1-way associativity greatly increases performance by avoiding memory conflicts, but also has diminishing returns at larger values. This is the reason we chose to simulate 2, 4 and 8-way associativities. Also, Cache Line Size has a rather negetive impact on the performance when small values are used, however very large values increase the implementation cost (based on Step 3).
+As we have learnt from the lessons, having set associativity greatly increases performance by avoiding memory conflicts, but also has diminishing returns at larger set size. This is the reason we chose to simulate 2, 4 and 8-way associativities. Also, Cache Line Size has a rather negetive impact on the performance when small values are used, however very large values increase the implementation cost (based on Step 3).
 
 #### 2. Results of the selected simulations
 * [Cache Line Size](./cls.md)
@@ -50,9 +50,9 @@ As we have learnt from the lessons, having more than 1-way associativity greatly
 For calculating the cost, we had a few key criteria in our minds.
 
 * First, the cost of every memory level scales linearly with its size.
-* Then, the higher level memories with the same characteristics (size, associativity etc) are cheaper to manufacture. In this case, we assumed that the L2 cache is 20% cheaper than the L1 cache.
+* Then, the higher level memories with the same characteristics (size, associativity etc) are cheaper to manufacture. In this case, we assumed that the L2 cache is 50% cheaper than the L1 cache.
 * Increasing the associativity should also increase the cost, but not linearly. As we saw in the lectures, increasing the associativity, has diminishing returns. More specifically, more than an 8 way associative memory, shows very little improvements in performance. We made an educated guess and chose a logarithmic increase in the overall cost from the increase in assosiativity.
-* Lastly, cash line size should also play a role in the final cost. We choose to multiply the above cost with the line size, because it affects both memory levels, and it increases the complexity of the hole cpu.
+* Lastly, cash line size should also play a role in the final cost. We choose to multiply the above cost with the line size, because it affects both memory levels, and it increases the complexity of the whole CPU.
 
 So we came up with the following formula
 
@@ -95,3 +95,15 @@ Considering our knowledge and our results from the benchmarks we run, we conclud
 The performance of the 2 configurations is displayed in the graph below. The final subplot indicates the **Price-to-Performance Ratio**, in this case in the form of `cost * cpi` where less is better.
 
 ![Chosen Parameter Results](./images/chosenresults.png)
+
+---
+
+### Comments
+
+First of all, we have encountered many compatibility issues between the lastest Ubuntu release, the cross-compiler and the spec2006 benchmarks. Secondly, despite changing different parameters of the architecture the results of the simulation did not show significant performance changes which was disappointing and difficult to work with. We suspect the simulated time being so low (less than half a second in most cases) is the main reason the results could not differentiate from one another. On the other hand, the script given to extract values from stats.txt has been proven quite usefull and time saving, after a small modification we saved the results in a `.csv` file and manipulated the data in MATLAB.
+
+### Sources
+
+[System Clock](http://learning.gem5.org/book/part1/example_configs.html#cmdoption--sys-clock)
+
+[CPU Clock](http://learning.gem5.org/book/part1/example_configs.html#cmdoption--cpu-clock)
